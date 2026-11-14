@@ -105,6 +105,7 @@ Aturan:
 ## Konten
 
 - Bahasa Indonesia santai, seperti ngobrol: "Intip proyekku", "Ngobrol yuk", "Yang udah kubikin", "Chat aku yuk". Hindari kata kaku seperti "ajak kolaborasi" atau "karya pilihan".
+- Paragraf "tentang" dan headline-nya ditulis Ahmad sendiri (headline: "Lebih dari sekadar menulis kode."). Jangan diparafrase tanpa izin.
 - Sekolah: **SMKIT Assyifa Boarding School**, kelas 11. Jurusan ditulis **RPL (Rekayasa Perangkat Lunak)**, bukan "Software Development".
 - Proyek dan skill harus sesuai isi repo GitHub Ahmad (`github.com/ahmadasraf2153`): KicksStore (Flutter), Diah Bakery (Laravel), Sanbercode Laravel Web Dev.
 - Foto: `assets/photo.jpg`, rasio 4:5.

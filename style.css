@@ -117,7 +117,7 @@ h1 .outline { color: transparent; -webkit-text-stroke: clamp(1.5px, .18vw, 3px) 
 /* SECTIONS */
 .section { padding: clamp(80px, 12vw, 150px) var(--gutter); max-width: 1320px; margin: 0 auto; }
 .kicker { font: 500 13px/1 var(--mono); letter-spacing: .12em; color: var(--accent); margin-bottom: 20px; }
-h2 { font: 700 clamp(26px, 3.4vw, 44px)/1.12 var(--display); letter-spacing: -.035em; max-width: 20ch; }
+h2 { text-wrap: balance; font: 700 clamp(26px, 3.4vw, 44px)/1.12 var(--display); letter-spacing: -.035em; max-width: 20ch; }
 
 /* PIN: scroll sebagai timeline */
 .pin { position: relative; }
@@ -217,9 +217,9 @@ footer {
   .hero h1 span.outline { transform: translate3d(calc(var(--p) * 30vw), 0, 0); }
   .about-pin .pin-inner { grid-template-columns: 1fr; align-content: center; gap: 24px; padding-top: 80px; }
   .about-copy h2 { font-size: clamp(26px, 7.5vw, 36px); margin-bottom: 14px; }
-  .lit { font-size: 15px; }
-  .photo { width: min(70%, 270px); }
-  .photo .tag { font-size: 24px; bottom: 14px; }
+  .lit { font-size: 14.5px; line-height: 1.6; }
+  .photo { width: min(46%, 190px); }
+  .photo .tag { font-size: 18px; bottom: 20px; white-space: nowrap; }
   .now { grid-template-columns: 1fr; }
   .project-list { width: 100%; }
   .project-list a { grid-template-columns: 1fr 28px; }
