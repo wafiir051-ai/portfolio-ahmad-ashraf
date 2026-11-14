@@ -12,10 +12,11 @@ Sebelum mengubah apa pun, baca bagian yang relevan di bawah dan ikuti. Kalau per
 ## Prinsip
 
 1. **Gelap yang kalem.** Latar hitam kehijauan, aksen lembut, tidak silau.
-2. **Scroll adalah timeline.** Dua bagian berurutan tidak boleh memakai efek scroll yang sama.
-3. **3D secukupnya.** Satu jaring titik-garis di layer tetap. Tidak ada video atau model berat.
-4. **Satu puncak.** Momen paling berkesan ada di bagian Proyek. Bagian lain sengaja lebih tenang.
-5. **Beda dari web lama Ahmad.** Jangan pakai bingkai arch untuk foto, titik aksen di belakang nama, strip marquee, atau kartu skill berbentuk chip.
+2. **Santai, bukan formal.** Bahasa seperti ngobrol, tampilan playful: tulisan tangan, stiker, garis bergelombang, highlighter, foto miring ala polaroid. Ahmad bilang versi formal terasa kaku, jangan kembali ke gaya itu.
+3. **Scroll adalah timeline.** Dua bagian berurutan tidak boleh memakai efek scroll yang sama.
+4. **3D secukupnya.** Satu jaring titik-garis di layer tetap. Tidak ada video atau model berat.
+5. **Satu puncak.** Momen paling berkesan ada di bagian Proyek. Bagian lain sengaja lebih tenang.
+6. **Beda dari web lama Ahmad.** Jangan pakai bingkai arch untuk foto, titik aksen di belakang nama, strip marquee, atau kartu skill berbentuk chip.
 
 ## Warna
 
@@ -41,7 +42,8 @@ Semua warna adalah variabel di `:root` pada `style.css`. Jangan tulis hex langsu
 |---|---|---|
 | Display | Bricolage Grotesque 700/800 | Judul dan nama. Letter-spacing rapat (`-.03em` sampai `-.055em`) |
 | Teks | Inter 400/500/600 | Paragraf, tombol |
-| Mono | JetBrains Mono 400/500 | Label kecil, terminal, tag |
+| Mono | JetBrains Mono 400/500 | Terminal, tag proyek |
+| Tulisan tangan | Caveat 700 | Intro di hero, label skill, keterangan foto, stiker "halo!" |
 
 - Nama di hero: `clamp(54px, 12.6vw, 190px)`, satu baris di desktop; kata kedua berupa outline (`-webkit-text-stroke`).
 - Judul bagian: `clamp(32px, 4.6vw, 58px)`, line-height 1.04.
@@ -59,7 +61,7 @@ Semua warna adalah variabel di `:root` pada `style.css`. Jangan tulis hex langsu
 - **Logo**: arch bergradasi `--accent` ke `--accent2` berisi huruf A, plus tulisan "ahmad" putih dan "ashraf" abu.
 - **Tombol**: pil. `primary` berisi `--accent`; `ghost` hanya bergaris. Hover naik 2px.
 - **Terminal "now"**: kartu `--bg-2` opak (bukan transparan), tiga titik jendela, isi mono. Perintah berwarna `--accent`, nilai berwarna `--accent2`.
-- **Foto**: 4:5, radius 28px, bingkai garis `--accent` bergeser 18px, tag kecil kiri bawah, gradasi gelap di 30% bawah.
+- **Foto**: gaya polaroid krem (`--paper`) miring -3 derajat, selotip `--accent2` di atas, keterangan tulisan tangan di bawah ("ahmad, kelas 11 RPL"). Pas foto formal pun jadi terasa santai.
 - **Baris proyek**: judul besar + satu kalimat + tag mono + panah. Baris aktif terang, bergeser, bergaris `--accent` di kiri.
 
 ## Tata scroll
@@ -94,6 +96,7 @@ Aturan:
 ## Larangan
 
 - Tidak ada em dash di teks yang terlihat.
+- Label kecil tidak huruf kapital semua.
 - Tidak ada penghitung bagian (`01 / 04`), isyarat "scroll to explore", atau label kecil di atas setiap judul.
 - Tidak ada teks gradien, glow neon, atau overlay gelap penuh untuk menolong kontras; pakai scrim hanya di bawah teks.
 - Tidak ada angka karangan atau klaim yang tidak terbukti. Kalau belum ada data, kosongkan atau beri komentar `TODO`.
@@ -101,7 +104,7 @@ Aturan:
 
 ## Konten
 
-- Bahasa Indonesia santai, kalimat pendek.
+- Bahasa Indonesia santai, seperti ngobrol: "Intip proyekku", "Ngobrol yuk", "Yang udah kubikin", "Chat aku yuk". Hindari kata kaku seperti "ajak kolaborasi" atau "karya pilihan".
 - Sekolah: **SMKIT Assyifa Boarding School**, kelas 11. Jurusan ditulis **RPL (Rekayasa Perangkat Lunak)**, bukan "Software Development".
 - Proyek dan skill harus sesuai isi repo GitHub Ahmad (`github.com/ahmadasraf2153`): KicksStore (Flutter), Diah Bakery (Laravel), Sanbercode Laravel Web Dev.
 - Foto: `assets/photo.jpg`, rasio 4:5.

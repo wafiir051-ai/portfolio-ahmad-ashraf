@@ -5,9 +5,10 @@ Panduan desain situs ini. Pakai file ini sebagai acuan tiap kali menambah bagian
 ## 1. Prinsip
 
 1. **Gelap yang kalem.** Latar hitam kehijauan, aksen lembut. Enak dilihat lama, tidak silau.
-2. **Scroll adalah timeline.** Tiap bagian punya efek scroll yang berbeda, tidak ada dua bagian berurutan yang bergerak sama.
-3. **3D secukupnya.** Satu jaring titik-garis di layer tetap, ringan. Tidak ada video atau model berat.
-4. **Satu puncak.** Momen paling berkesan ada di bagian Proyek (jaring terbelah jadi tiga). Bagian lain sengaja lebih tenang.
+2. **Santai, bukan formal.** Bahasa seperti ngobrol, tampilan playful: tulisan tangan, stiker, garis bergelombang, highlighter, foto miring ala polaroid. Ahmad bilang versi formal terasa kaku, jangan kembali ke gaya itu.
+3. **Scroll adalah timeline.** Tiap bagian punya efek scroll yang berbeda, tidak ada dua bagian berurutan yang bergerak sama.
+4. **3D secukupnya.** Satu jaring titik-garis di layer tetap, ringan. Tidak ada video atau model berat.
+5. **Satu puncak.** Momen paling berkesan ada di bagian Proyek (jaring terbelah jadi tiga). Bagian lain sengaja lebih tenang.
 5. **Beda dari yang lain.** Jangan meniru web lama Ahmad: tanpa bingkai arch, tanpa titik aksen di nama, tanpa strip marquee, tanpa kartu skill berbentuk chip.
 
 ## 2. Warna
@@ -89,6 +90,7 @@ Aturan:
 ## 8. Larangan
 
 - Tidak ada em dash di teks yang terlihat.
+- Label kecil tidak huruf kapital semua.
 - Tidak ada penghitung bagian (`01 / 04`), isyarat "scroll to explore", atau label kecil di atas setiap judul.
 - Tidak ada teks gradien, glow neon, atau overlay gelap penuh untuk menolong kontras. Pakai scrim hanya di bawah teks.
 - Tidak ada angka karangan (statistik palsu). Kalau belum ada data, kosongkan.
