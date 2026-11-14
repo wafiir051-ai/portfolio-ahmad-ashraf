@@ -147,7 +147,7 @@ h2 { font: 800 clamp(32px, 4.6vw, 58px)/1.04 var(--display); letter-spacing: -.0
 
 /* NOW (terminal) */
 .now { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(28px, 6vw, 90px); align-items: center; }
-.term { border: 1px solid var(--line); border-radius: 16px; background: rgba(var(--bg-rgb), .88); overflow: hidden; box-shadow: 0 30px 60px -30px rgba(0,0,0,.6); }
+.term { border: 1px solid var(--line); border-radius: 16px; background: var(--bg-2); overflow: hidden; box-shadow: 0 30px 60px -30px rgba(0,0,0,.6); }
 .term-bar { display: flex; align-items: center; gap: 7px; padding: 12px 16px; border-bottom: 1px solid var(--line); font: 400 12px/1 var(--mono); color: var(--muted); }
 .term-bar i { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,.14); }
 .term-bar i:first-child { background: #ff6b6b99; } .term-bar i:nth-child(2) { background: #ffd16699; } .term-bar i:nth-child(3) { background: #5ee08a99; }

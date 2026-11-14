@@ -112,7 +112,7 @@ const WP = {
   desk: [
     { x: .4,  y: .3,  s: .74, a: 1,   e: 0 },   // hero
     { x: .52, y: 0,   s: 1.15, a: .95, e: 0 },  // about: mengintip dari balik foto
-    { x: .5,  y: .1,  s: .62, a: .9,  e: 0 },   // now
+    { x: -.5, y: .5,  s: .5,  a: .8,  e: 0 },   // now: di area kosong kiri atas
     { x: 0,   y: 0,   s: 1.7, a: .11, e: 0 },   // skills: bayangan besar di belakang kata
     { x: .7,  y: 0,   s: .85, a: 1,   e: 1 },   // projects: pecah jadi tiga
     { x: 0,   y: -.05, s: 1.3, a: .24, e: 0 }   // contact: tenang, utuh lagi
