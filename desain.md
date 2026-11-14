@@ -6,8 +6,8 @@ Panduan desain situs ini. Pakai file ini sebagai acuan tiap kali menambah bagian
 
 1. **Gelap yang kalem.** Latar hitam kehijauan, aksen lembut. Enak dilihat lama, tidak silau.
 2. **Scroll adalah timeline.** Tiap bagian punya efek scroll yang berbeda, tidak ada dua bagian berurutan yang bergerak sama.
-3. **3D secukupnya.** Satu kristal di layer tetap, ringan. Tidak ada video atau model berat.
-4. **Satu puncak.** Momen paling berkesan ada di bagian Proyek (kristal pecah jadi tiga). Bagian lain sengaja lebih tenang.
+3. **3D secukupnya.** Satu jaring titik-garis di layer tetap, ringan. Tidak ada video atau model berat.
+4. **Satu puncak.** Momen paling berkesan ada di bagian Proyek (jaring terbelah jadi tiga). Bagian lain sengaja lebih tenang.
 5. **Beda dari yang lain.** Jangan meniru web lama Ahmad: tanpa bingkai arch, tanpa titik aksen di nama, tanpa strip marquee, tanpa kartu skill berbentuk chip.
 
 ## 2. Warna
@@ -65,23 +65,26 @@ Semua warna ada sebagai variabel di `:root` pada `style.css`. Jangan tulis hex l
 | Tentang | pin + reveal | Bagian berhenti, foto terbuka dari bawah, kalimat menyala per kata | Hangat, dikenali |
 | Lagi sibuk apa | reveal biasa | Terminal muncul | Santai |
 | Skill | pin + pan | Halaman bergeser ke samping, satu panel per kategori | Ritme |
-| Proyek (puncak) | sorotan baris | Kristal pecah jadi tiga, serpihan proyek aktif membesar dan menyala | Puas |
-| Kontak | reveal | Kristal utuh lagi dan tenang, judul besar bertahan sebagai penutup | Lega |
+| Proyek (puncak) | sorotan baris | Jaring terbelah jadi tiga gugus, gugus proyek aktif menyala | Puas |
+| Kontak | reveal | Jaring utuh lagi dan samar, judul bertahan sebagai penutup | Lega |
 
 Aturan:
 - Dua bagian berurutan tidak boleh memakai perangkat yang sama.
 - Animasi hanya `transform` dan `opacity`; wipe memakai `clip-path`. Jangan animasikan `width`, `height`, `top`, `left`.
 - Tinggi bagian pin dihitung dari isi (skill: tinggi layar + lebar track), bukan angka tetap.
-- Pengguna dengan `prefers-reduced-motion`: semua pin dimatikan, foto dan kata langsung tampil, kristal tidak berputar.
+- Pengguna dengan `prefers-reduced-motion`: semua pin dimatikan, foto dan kata langsung tampil, jaring tidak bergerak.
 
 ## 7. Objek 3D
 
 - Satu `canvas` tetap di belakang konten (`position: fixed`, `pointer-events: none`), Three.js.
-- Isi: inti ikosahedron bersudut datar, cangkang wireframe tipis, satu cincin, tiga serpihan kecil.
-- Posisi, skala, opasitas, dan tingkat "pecah" ditentukan per bagian (tabel `WP` di `main.js`), lalu dihaluskan saat scroll. Desktop dan mobile punya tabel sendiri.
-- Anggaran performa: piksel rasio maksimal 1.5, lampu hanya empat, tidak ada tekstur, tidak ada bayangan. Render berhenti saat tab tersembunyi.
-- Di bagian dengan banyak teks (skill, kontak) opasitas kristal diturunkan jadi bayangan samar supaya teks tetap terbaca.
-- Jika WebGL gagal, canvas dibuang dan halaman tetap utuh.
+- Bentuknya **jaring** (jaring-jaring): sekitar 84 titik bercahaya yang tersebar rata, dihubungkan garis tipis antar titik yang berdekatan. Bukan bola atau globe; jangan kembalikan ke bentuk bulat.
+- Titik melayang pelan, dan menjauh dari kursor. Garis dihitung ulang tiap frame dari jarak antar titik.
+- Posisi, skala, opasitas, dan tingkat "pecah" per bagian ada di tabel `WP` (`main.js`), dihaluskan saat scroll. Desktop dan mobile punya tabel sendiri; jumlah baris harus sama dengan jumlah bagian di `secs`.
+- Di bagian Proyek jaring terbelah jadi tiga gugus (satu per proyek). Gugus proyek yang sedang dibaca berwarna `--accent2` dan sedikit lebih besar.
+- Anggaran performa: pixel ratio maksimal 1.5, maksimal 1400 garis, tanpa bayangan dan tanpa lampu. Satu-satunya tekstur adalah sprite titik kecil yang dibuat lewat canvas. Render berhenti saat tab tersembunyi.
+- Di bagian dengan banyak teks (tentang, skill, kontak) opasitas jaring diturunkan supaya teks terbaca.
+- Jaring tidak boleh membuat teks sulit dibaca. Kalau perlu, turunkan opasitas atau pindahkan ke area kosong.
+- Kalau WebGL gagal, canvas dibuang dan halaman tetap utuh.
 
 ## 8. Larangan
 
@@ -96,4 +99,4 @@ Aturan:
 - Placeholder ditandai komentar `TODO` di `index.html`: proyek, skill, isi terminal, dan link kontak.
 - Foto: `assets/photo.jpg`, rasio 4:5. Semakin besar resolusinya semakin tajam.
 - Tema baru: salin blok `[data-theme="..."]` di `style.css`, ganti nilai token, lalu panggil lewat `?theme=nama`.
-- Bagian baru: pilih perangkat scroll yang belum dipakai bagian di sebelahnya, tentukan satu baris di tabel `WP` untuk kristal, dan tulis rasa yang ingin ditimbulkan sebelum membuat tampilannya.
+- Bagian baru: pilih perangkat scroll yang belum dipakai bagian di sebelahnya, tentukan satu baris di tabel `WP` untuk jaring, dan tulis rasa yang ingin ditimbulkan sebelum membuat tampilannya.
