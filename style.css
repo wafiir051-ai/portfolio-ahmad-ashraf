@@ -202,6 +202,9 @@ footer {
   padding: 28px var(--gutter); border-top: 1px solid var(--line);
   font: 400 12px/1 var(--mono); color: var(--muted);
 }
+footer .credit { flex: 0 0 100%; text-align: center; padding-top: 18px; margin-top: 10px; border-top: 1px solid var(--line); }
+footer .credit a { color: var(--text); border-bottom: 1px solid rgba(var(--accent-rgb), .6); transition: color .2s, border-color .2s; }
+footer .credit a:hover { color: var(--accent); border-color: var(--accent); }
 
 /* REVEAL */
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); }
